@@ -1,8 +1,8 @@
 def dati():
     while True:
         print("\nDatetime and Time Operations: \n1. Display current date and time\n2. Calculate diffrence between two dates/times\n3. Format date into custom format\n4. Stopwatch\n5. Countdown Timer\n6. Back to Main Menu ")
-        ch = int(input("\nEnter your choice: "))
-        match ch:
+        choice = int(input("\nEnter your choice: "))
+        match choice:
             case 1:
                 import datetime
                 now = datetime.datetime.now()
@@ -44,8 +44,9 @@ def dati():
                 break
 def maop():
     while True:
-        ch = int(input("Enter your choice: "))
-        match ch:
+        print("\nMathematical Operations: \n1. Calculate Factorial\n2. Solve Compound Interest\n3. Trigonometric Calculations\n4. Area of Geometric Shapes\n5. Advanced mathematical function\n6. Back to main menu")
+        chi = int(input("Enter your choice: "))
+        match chi:
             case 1:    
                 import math    
                 f = int(input("Enter a number: "))
@@ -72,11 +73,15 @@ def maop():
                 c = math.pi * math.pow(2,2)
                 print("Area of circle: ",c)
             case 5:
+                import package.adc_math_func as m
+                h = m.func()
+            case 6:
                 break
 def radge():
     while True:
-        ch = int(input("Enter your choice: "))
-        match ch:
+        print("Random Data Generations: \n1. Generate Random Number\n2. Generate Random List\n3. Create Random Password\n4. Generate Random OTP\n5. Back to Main Menu")
+        chs = int(input("Enter your choice: "))
+        match chs:
             case 1: 
                 import random
                 l = random.randint(1,10)
@@ -104,8 +109,9 @@ def radge():
                 break
 def fiop():
     while True:
-        ch =int(input("\nEnter your choice: "))
-        match ch:
+        print("File Operations: \n1. Create a new file\n2. Write to a file\n3. Read from a file\n4. Append to a file\n5. Back to main menu")
+        cha =int(input("\nEnter your choice: "))
+        match cha:
             case 1:
                 import file as fi
                 f = input("\nEnter file name: ")
@@ -154,16 +160,13 @@ while(True):
         case 1:
             dati()
         case 2:
-            print("\nMathematical Operations: \n1. Calculate Factorial\n2. Solve Compound Interest\n3. Trigonometric Calculations\n4. Area of Geometric Shapes\n5. Back to main menu")
             maop()
         case 3:
-            print("Random Data Generations: \n1. Generate Random Number\n2. Generate Random List\n3. Create Random Password\n4. Generate Random OTP\n5. Back to Main Menu")
             radge()
         case 4:
             import uuid
             print("Generated UUID",uuid.uuid4())
         case 5:
-            print("File Operations: \n1. Create a new file\n2. Write to a file\n3. Read from a file\n4. Append to a file\n5. Back to main menu")
             fiop()
         case 6:
             uid()
