@@ -174,3 +174,4 @@ while(True):
             print("Thank you for using the Multi-Utility Toolkit!" )
         case _:
             print("Invalid choice please choose valid number")
+            break
